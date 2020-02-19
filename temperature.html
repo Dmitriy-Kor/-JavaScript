@@ -8,9 +8,16 @@
 <script>
     'use strict'
     // задание 1
+    // let temperatuteC = +prompt("Введите температуру в градусах цельсия");
+    // let temperatureF = ((9 / 5) * temperatuteC) + 32;
+    // alert("Температура по фаренгейту: " + temperatureF);
+    //
     let temperatuteC = +prompt("Введите температуру в градусах цельсия");
+    for (;isNaN(temperatuteC);){
+        temperatuteC = +prompt("Введите температуру в градусах цельсия");
+    }
     let temperatureF = ((9 / 5) * temperatuteC) + 32;
-    alert("Температура по фаренгейту: " + temperatureF);
+    alert("Температура по фаренгейту: " + temperatureF.toFixed(1));
 
 
     // задание 2
@@ -59,10 +66,12 @@
 
 
     // задание 4
-    let mode = "normal"; // можно
-    let my_valu3 = 102; // можно
-    let 3my_value3 = "102"; let __hello__ = "world"; let $$$ = "money"; // нельзя
-    let !0_world = true; //нельзя
+    let mode = "normal"; // можно, слово незарезервированное
+    let my_valu3 = 102; // можно, можно использовать нижнее подчеркивание
+    let 3my_value3 = "102"; // нельзя начинать с числа
+    let __hello__ = "world"; // можно
+    let $$$ = "money"; // можно, "$" не используется в коде
+    let !0_world = true; //нельзя, "!" используется в коде
 
 </script>
 </body>
