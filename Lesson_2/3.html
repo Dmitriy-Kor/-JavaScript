@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise_3</title>
+</head>
+<body>
+<script>
+    'use strict';
+    let a = Number(prompt("введите, целочисленное произвольное начальное значение ))"));
+    let b = Number(prompt("введите, другое целочисленное произвольное значение ))"));
+    let a_sign = Math.sign(a);
+    let b_sign = Math.sign(b);
+
+    if (isNaN(a) || isNaN(b)){
+        alert("Вы ввели не число((");
+     }
+    if (a >= 0 && b >=0) {
+        let result = a - b;
+        alert(result);
+    }
+    if (a < 0 && b < 0){
+        let result = a * b;
+        alert(result);
+    }
+    if ((a_sign != b_sign) && !isNaN(a_sign) && !isNaN(b_sign)){
+        let result = a + b;
+        alert(result);
+    }
+
+</script>
+</body>
+</html>
