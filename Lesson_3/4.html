@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise_4</title>
+
+</head>
+<body>
+<script>
+    'use strict';
+
+    const products = [
+        {
+            id: 3,
+            price: 200,
+        },
+        {
+            id: 4,
+            price: 900,
+        },
+        {
+            id: 1,
+            price: 1000,
+        },
+    ];
+    // выполняем функцию для каждого элемента массива products
+    products.forEach(function (product) {
+        product.price = product.price - product.price * 0.15; // уменьшаем price на 15%
+    });
+    // выводим в консоль
+    for (let i = 0; i < products.length; i++) {
+        console.log(products[i].price);
+    }
+</script>
+</body>
+</html>

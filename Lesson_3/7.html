@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise_7</title>
+
+</head>
+<body>
+<script>
+    // 'use strict';
+    // let symbol = "x";
+    // let text = "";
+    // for (let i = 1; i <= 20; i++) {
+    //     text += sign;
+    //     console.log(text);
+    // }
+
+    /**
+     * Функция состовляет треугольник из заданого символа
+     * @param {string} symbol символ
+     * @param {number} base длинна основания
+     */
+    function drawTriangleBySymbol(symbol, base) {
+        let triangle = "";
+        for (let i = 1; i <= base; i++) {
+            triangle += symbol;
+            console.log(triangle);
+        }
+    }
+
+    drawTriangleBySymbol("x", 20);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise_5</title>
+</head>
+<body>
+<script>
+    'use strict';
+    const products = [
+        {
+            id: 3,
+            price: 127,
+            photos: ["1.jpg", "2.jpg",]
+        },
+        {
+            id: 5,
+            price: 499,
+            photos: []
+        },
+        {
+            id: 10,
+            price: 26,
+            photos: ["3.jpg"]
+        },
+        {
+            id: 8,
+            price: 78,
+        },
+    ];
+// создаем новый массив из элементов прошедших проверку
+// функция проверяет наличие у элемента массива свойства(ключа) "photos", а также, что его значение не пустое
+let productsWithPhoto = products.filter( function (product) {return "photos" in product && product.photos.length > 0 });
+// выводим в консоль
+console.log(productsWithPhoto);
+
+// сортируем элементы массива, функция определяет порядок сортировки
+let productsPriceFromMinToMax = products.sort(function (product_a, product_b) {
+    return product_a.price - product_b.price;});
+
+// выводим в консоль
+for (let i = 0; i < products.length; i++) {
+        console.log(products[i].price);
+    }
+
+</script>
+</body>
+</html>
