@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise_6</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    /**
+     * Функция преобразует аргумент в строку и вычисляет ее длинну, не считает дробную часть.
+     * @param arg преобразуется в строку
+     * @return {number} возвращает длину текста
+     */
+    function text_length(arg) {
+        arg = parseInt(arg);
+        let text = String(arg);
+        let length_text = text.length;
+        return length_text;
+    }
+
+    /**
+     * Функция преобразует аргумент в строку, убирает дробную часть и определяет последний символ.
+     * @param arg преобразуется в строку
+     * @return {string} возвращает последний символ
+     */
+    function last_sign(arg) {
+        arg = parseInt(arg);
+        let text = String(arg);
+        let length_text = text.length;
+        return text.charAt(length_text - 1);
+    }
+
+    /**
+     * Функция склоняет по падежам текст (рубль) в зависимости от окончания впереди идущего числа.
+     * @param sign {string} последний символ числа 0-9
+     * @param length {number} длинна числа
+     * @param summ {number} само число
+     * @return {string} возвращает текст
+     */
+    function rubls_declination(sign,length,summ){
+        let text = "";
+        //условия для чисел от 10 до 20
+        if (length == 2 && summ <= 20){
+            text = " рублей";
+            return text;
+        }
+        //условия для чисел меньше 1
+        if (length >= 2 && summ < 1){
+            text = " рубля";
+            return text;
+        }
+        //все остальные числа
+        if (length >= 1){
+            switch (sign) {
+                case "0":
+                    text = " рублей";
+                    break;
+                case "1":
+                    text = " рубль";
+                    break;
+                case "2":
+                case "3":
+                case "4":
+                    text = " рубля";
+                    break;
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                    text = " рублей";
+                    break;
+            }
+            return text;
+        }
+    }
+
+
+    let rubls = Number(prompt("Веедите сумму в рублях:"));
+    // проверки проверки корректности ввода
+    if (isNaN(rubls)){
+        alert("Вы ввели не число((");
+    } else if (rubls <= 0){
+        alert("Нужно ввести положительное число");
+    } else {
+    //вызов функций
+    alert("Ваша сумма в " + rubls + rubls_declination(last_sign(rubls),text_length(rubls),rubls) + " успешно зачислена.");
+    }
+</script>
+</body>
+</html>

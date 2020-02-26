@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise_5</title>
+
+</head>
+<body>
+<script>
+    'use strict';
+    // функции из 4-го задания
+    /**
+     * Функция складывает переданные параметры.
+     * @param a {number} первое число
+     * @param b {number} второе число
+     * @returns {number} a+b
+     */
+    function sum(a,b) {
+        return a + b;
+    }
+
+    /**
+     * Функция вычетает переданные параметры.
+     * @param a {number} первое число
+     * @param b {number} второе число
+     * @returns {number} a-b
+     */
+    function subtract(a,b) {
+        return a - b;
+    }
+    /**
+     * Функция умножает переданные параметры.
+     * @param a {number} первое число
+     * @param b {number} второе число
+     * @returns {number} a*b
+     */
+    function multiply(a,b) {
+        return a * b;
+    }
+    /**
+     * Функция делит переданные параметры.
+     * @param a {number} первое число
+     * @param b {number} второе число
+     * @returns {number} a/b
+     */
+    function division(a,b) {
+        return a / b;
+    }
+
+    //функция из 5-го задания
+    /**
+     * Функция выполняет одну из арифметических операций над переданными параметрами
+     * @param arg1 {number} Первое число
+     * @param arg2 {number} Второе число
+     * @param operation {string} Название операции в виде "+", "-", "*","/"
+     * @returns {number} Ответ число
+     * @throws {Error} если передана не предусмотренная операция
+     */
+    function mathOperation (arg1, arg2, operation){
+        let result = null;
+        switch (operation) {
+            case "+":
+                result = sum(arg1,arg2);
+                break;
+            case "-":
+                result = subtract(arg1,arg2);
+                break;
+            case "*":
+                result = multiply(arg1,arg2);
+                break;
+            case "/":
+                result = division(arg1,arg2);
+                break;
+            default:
+                throw new Error("Все сломалось! Функцция: " + operation + "не предусмотрена");
+        }
+        return result;
+    }
+
+
+    let a = +prompt("введите первое число");
+    let b = +prompt("введите второе число");
+    let sign = prompt(`выбирите операцию, напишите "+", "-" , "*" или "/"`);
+
+    if (isNaN(a) || isNaN(b)){
+        alert("Вы ввели не число((");
+    }
+    if (sign == "+" || sign == "-" || sign == "*" || sign == "/"){
+        alert("Ответ: " + mathOperation(a,b,sign));
+    } else {
+        alert("Вы ввели неправельный символ((");
+    }
+</script>
+</body>
+</html>

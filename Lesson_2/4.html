@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise_4</title>
+
+</head>
+<body>
+<script>
+    'use strict';
+
+    /**
+     * Функция складывает переданные параметры.
+     * @param a {number} первое число
+     * @param b {number} второе число
+     * @returns {number} a+b
+     */
+    function sum(a,b) {
+        let result = a + b;
+        return result;
+    }
+
+    /**
+     * Функция вычетает переданные параметры.
+     * @param a {number} первое число
+     * @param b {number} второе число
+     * @returns {number} a-b
+     */
+    function subtract(a,b) {
+        let result = a - b;
+        return result;
+    }
+    /**
+     * Функция умножает переданные параметры.
+     * @param a {number} первое число
+     * @param b {number} второе число
+     * @returns {number} a*b
+     */
+    function multiply(a,b) {
+        let result = a * b;
+        return result;
+    }
+    /**
+     * Функция делит переданные параметры.
+     * @param a {number} первое число
+     * @param b {number} второе число
+     * @returns {number} a/b
+     */
+    function division(a,b) {
+        let result = a / b;
+        return result;
+    }
+
+
+    let a = Number(prompt("введите первое число:"));
+    let b = Number(prompt("введите второе число:"));
+
+    if (isNaN(a) || isNaN(b)){
+        alert("Вы ввели не число((");
+    }else{
+    // выводит результаты всех функций
+        alert( `${a} + ${b} = ` + sum(a,b) + `\n${a} - ${b} = ` + subtract(a,b) + `\n${a} * ${b} = ` + multiply(a,b) + `\n${a} / ${b} = ` + division(a,b).toFixed(4));
+    }
+</script>
+</body>
+</html>
