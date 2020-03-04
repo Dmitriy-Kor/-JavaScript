@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise_1.1</title>
+
+</head>
+<body>
+<script>
+    'use strict';
+
+    /**
+     * Функция преобразует число в объект в котором описаны разряды числа еденицы, десятки, сотни.
+      * @param {number} num исходное число от 0 до 999
+     * @return {{}|{tens: number, units: number, hundreds: number}} возвращает объект со свойствами или в случаи ошибки пустой обект
+     */
+    function expendNumber(num) {
+        if (!Number.isInteger(num) || num < 0 || num > 999) {
+            alert("Нужно было ввести целое число от 0 до 999 ");
+            return {};
+        } else {
+            return {
+                units: num % 10, //это единицы
+                tens: Math.floor(num / 10) % 10, //это десятки
+                hundreds: parseInt(num / 100), //это сотни
+            }
+        }
+    }
+    let num = +prompt("введите целое число от 0 до 999:");
+    const obj = expendNumber(num);
+    console.log(obj);
+    console.log(obj.units);
+    console.log(obj.tens);
+    console.log(obj.hundreds);
+
+</script>
+</body>
+</html>

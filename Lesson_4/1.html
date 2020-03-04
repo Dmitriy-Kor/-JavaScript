@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise_1</title>
+</head>
+<body>
+<script>
+    'use strict';
+    // у меня не получилось сделать одну функцию для решения первого задания, но результат получаю
+    /**
+     * Функция просит ввести число, проверяет введено число от 0 до 999 и явлется оно целым числом, приводит числа к трехзначному виду (47 = 047)
+     * @return {string} возвращает число ввиде строки или если непройдина проверка строку "empty"
+     */
+    function takeNumberFromUser (){
+        let user_num = +prompt('введите целое число от 0 до 999:');
+        if (!Number.isInteger(user_num) || user_num < 0 || user_num > 999){
+            alert('Нужно ввести целое число от 0 до 999')
+            return "empty"; // не уверен, что хорошо так делать. функция возвращает string, ну я и взял срочку для дольнейшей проверки
+        }
+        user_num= String(user_num);
+        //
+        if (user_num.length < 2){
+            user_num = "00"+ user_num;
+            return user_num;
+        };
+        if (user_num.length < 3){
+            user_num = "0"+ user_num;
+            return user_num;
+        };
+        return user_num;
+    }
+
+    /**
+     * функция определяет последний символ
+     * @param {string} number приходит число ввиде строки
+     * @return {number} возвращает поледнию цифру в виде числа
+     */
+    function lastNumeral(number) {
+        return parseInt(number.charAt(number.length - 1));
+    };
+    function secondNumeral(number) {
+        return parseInt(number.charAt(number.length - 2));
+    };
+    function firstNumeral(number) {
+        return parseInt(number.charAt(number.length - 3));
+    };
+
+    
+    function expandNumber (number) {
+        if (number == "empty") {
+            return {};
+        } else {
+            return {
+                units: lastNumeral(number),
+                tens: secondNumeral(number),
+                hundreds: firstNumeral(number),
+            };
+        };
+    };
+
+    let user_num = takeNumberFromUser();
+    let obj = expandNumber(user_num);
+
+    console.log(obj);
+    console.log(obj.units);
+    console.log(obj.tens);
+    console.log(obj.hundreds);
+
+</script>
+</body>
+</html>
