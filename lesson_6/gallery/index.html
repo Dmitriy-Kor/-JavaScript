@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lightgallery.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="lightgallery">
+    <a class="gallery-link" href="https://placeimg.com/640/480/animals">
+        <img class="gallery-img" src="https://placeimg.com/640/480/animals" alt="">
+    </a>
+    <a class="gallery-link" href="https://placeimg.com/640/480/nature">
+        <img class="gallery-img" src="https://placeimg.com/640/480/nature" alt="">
+    </a>
+    <a class="gallery-link" href="https://placeimg.com/640/480/tech">
+        <img class="gallery-img" src="https://placeimg.com/640/480/tech" alt="">
+    </a>
+    <a class="gallery-link" href="https://placeimg.com/640/480/people">
+        <img class="gallery-img" src="https://placeimg.com/640/480/people" alt="">
+    </a>
+    <a class="gallery-link" href="https://placeimg.com/640/480/arch">
+        <img class="gallery-img" src="https://placeimg.com/640/480/arch" alt="">
+    </a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="lightGallery-master/dist/js/lightgallery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery();
+    });
+</script>
+
+</body>
+</html>
