@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Шашки</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Шашки</h1>
+<div class="menuGame">
+    <div>
+        <input type="radio" id="rus" value="rus" name="typeGame" checked>
+        <label for="rus">Русские шашки 8 х 8</label>
+    </div>
+    <div>
+        <input type="radio" id="int" value="int" name="typeGame">
+        <label for="int">Международные шашки 10 х 10</label>
+    </div>
+
+    <button class="btnStart" id="btnStart">Старт</button>
+
+</div>
+<table id="board"></table>
+<script src="dist/app.js"></script>
+</body>
+</html>
