@@ -1,0 +1,28 @@
+.products {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-box {
+  width: 30vw;
+}
+.product-box__pic {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.header {
+  background-color: lightsteelblue;
+  padding: 1%;
+}
+
+.table {
+  background-color: #ffffff;
+}
+
+.fas {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
